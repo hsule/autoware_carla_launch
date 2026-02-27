@@ -11,11 +11,11 @@ prepare_bridge:
 	# Get code
 	git submodule update --init --recursive
 	sudo apt update
-	# Install rmw_zenoh
-	./script/setup/build_zenoh.sh
 	# Install dependencies
 	./script/setup/dependency_install.sh rust
 	./script/setup/dependency_install.sh python
+	# Install rmw_zenoh
+	./script/setup/build_zenoh.sh
 
 prepare_autoware:
 	# Get code
